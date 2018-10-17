@@ -1,10 +1,14 @@
 # IE6 error debugging notes
 
 The solution to the LZ compress error was to replace, in line 127, the line from: 
+```
 context_c = uncompressed[ii]; 
+```
 to
+```
 context_c = uncompressed.charAt(ii);
-	
+```
+
 apperently accessing a character that way doesn't work on IE6, and context_c became undefined
 the way I semulated IE6 was with IE's competability mode.
 
