@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+
+// the cookie getter code was found online (stack overflow).
 function getCookie(c_name)
 {
     var i,x,y,ARRcookies=document.cookie.split(";");
