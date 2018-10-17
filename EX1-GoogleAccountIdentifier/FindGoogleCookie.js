@@ -8,7 +8,7 @@
 // @grant        none
 // ==/UserScript==
 
-function getCookieStartsWith(c_name)
+function getCookie(c_name)
 {
     var i,x,y,ARRcookies=document.cookie.split(";");
 
@@ -17,7 +17,7 @@ function getCookieStartsWith(c_name)
         x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
         y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
         x=x.replace(/^\s+|\s+$/g,"");
-        if (x.startsWith(c_name))
+        if (x==c_name)
         {
             return unescape(y);
         }
@@ -26,7 +26,7 @@ function getCookieStartsWith(c_name)
 
 (function() {
     'use strict';
-    if (Boolean(getCookieStartsWith("_gac_UA-"))){
+    if (Boolean(getCookie("_gac_UA-12078752-1"))){
 	console.log("Connected to a Google account");
 } else {
 	console.log("Not connected to a Google account");
