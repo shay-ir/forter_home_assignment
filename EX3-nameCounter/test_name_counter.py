@@ -25,6 +25,9 @@ def test_typo_nickname():
 def test_typo_nickname_and_no_nickname():
 	assert count_unique_names("Debarah","Egli","Debbie","Egli","Deborah Egli") == 1
 
+def test_different_typos():
+	assert count_unique_names("Deborah","Egki","Deborah","Eglu","Deborah Egli") == 1
+
 def test_unused_middle_name():
 	assert count_unique_names("Deborah S","Egli","Deborah","Egli","Egli Deborah") == 1
 
